@@ -1,0 +1,35 @@
+html, body {
+	margin: 8px;
+}
+
+h1 {
+	font-family: Arial, sans-serif;
+	margin: 0;
+}
+
+p {
+	margin: 6px 0;
+}
+
+.wrapper {
+	display: table;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#screenshots {
+	overflow: hidden;
+}
+
+#screenshots > div {
+	float: left;
+	margin: 8px 8px 16px 8px;
+}
+
+#screenshots > div > p {
+	margin: 0;
+}
+
+#screenshots > div > img {
+	border: 1px solid #000;
+}

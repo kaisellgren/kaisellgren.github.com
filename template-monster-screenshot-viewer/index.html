@@ -2,8 +2,21 @@
 <html>
 <head>
 	<title>Template Monster Screenshot Viewer</title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+	<script type="text/javascript" src="viewer.js"></script>
+	<script type="text/javascript" src="jquery.base64.min.js"></script>
 </head>
 <body>
-	<h1>Template Monster Screenshot Viewer</h1>
+	<div class="wrapper">
+		<h1>Template Monster Screenshot Viewer</h1>
+		<p>I figured there should be an easier way to see template screenshots. I hereby represent you my new tool.<br />
+		Write templates identifiers below in any format you like and that's it.</p>
+		<p>FYI, I am the original author of the much older TM viewer, which was copied and cloned on several sites.<br />And as always, for whatever purpose you use this tool, is not my concern. </p>
+		<textarea id="templates" rows="5" cols="100"></textarea>
+		<div></div>
+		<button id="watch">See screenshots!</button>
+		<div id="screenshots"></div>
+	</div>
 </body>
 </html>
