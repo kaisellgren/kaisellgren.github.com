@@ -44,11 +44,17 @@
 <h1 class='fqn'><div class='in-band'>Crate <a class='mod' href=''>rust_git</a><wbr></div><div class='out-of-band'><a href='stability.html'>[stability]</a> <span id='render-detail'>
             <a id="collapse-all" href="#">[-]
             </a>&nbsp;<a id="expand-all" href="#">[+]</a>
-        </span><a id='src-0' href='../src/rust_git/up/RustGit/src/rust_git.rs.html#1-43'>[src]</a></div></h1>
-<div class='docblock'><p>RustGit provides facilities for reading, manipulating and creating Git repositories.</p>
+        </span><a id='src-0' href='../src/rust_git/up/RustGit/src/rust_git.rs.html#1-48'>[src]</a></div></h1>
+<div class='docblock'><p><code>rust_git</code> provides facilities for reading, manipulating and creating Git repositories.</p>
 
+<p>The project is still in its early stages.</p>
+
+<h1 id="examples" class='section-header'><a
+                           href="#examples">Examples</a></h1>
 <h3 id="finding-a-changeset" class='section-header'><a
-                           href="#finding-a-changeset">Finding a changeset</a></h3><pre class='rust '>
+                           href="#finding-a-changeset">Finding a changeset</a></h3>
+<p>The following example finds a changeset and returns its message.</p>
+<pre class='rust '>
 <span class='kw'>fn</span> <span class='ident'>get_message_by_commit_id</span>(<span class='ident'>id</span>: <span class='kw-2'>&amp;</span><span class='ident'>ObjectId</span>) <span class='op'>-&gt;</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span><span class='ident'>String</span>, <span class='ident'>GitError</span><span class='op'>&gt;</span> {
     <span class='kw'>let</span> <span class='ident'>path</span> <span class='op'>=</span> <span class='ident'>Path</span>::<span class='ident'>new</span>(<span class='string'>&quot;/path/to/repo&quot;</span>);
     <span class='kw'>let</span> <span class='ident'>repo</span> <span class='op'>=</span> <span class='ident'>Repository</span>::<span class='ident'>open</span>(<span class='kw-2'>&amp;</span><span class='ident'>path</span>);
