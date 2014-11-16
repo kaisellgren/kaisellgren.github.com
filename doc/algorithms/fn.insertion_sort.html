@@ -52,8 +52,16 @@ th {
 <h1 class='fqn'><span class='in-band'>Function <a href='index.html'>algorithms</a>::<wbr><a class='fn' href=''>insertion_sort</a><wbr></span><span class='out-of-band'><span id='render-detail'>
             <a id="collapse-all" href="#">[-]
             </a>&nbsp;<a id="expand-all" href="#">[+]</a>
-        </span><a id='src-36' href='../src/algorithms/up/algorithms/src/algorithms.rs.html#22-33'>[src]</a></span></h1>
-<pre class='rust fn'>pub fn insertion_sort&lt;'a, T: <a class='trait' href='http://doc.rust-lang.org/0.12.0/core/cmp/trait.Ord.html' title='core::cmp::Ord'>Ord</a> + 'a&gt;(data: &amp;'a mut <a href='http://doc.rust-lang.org/0.12.0/std/primitive.slice.html'>[T]</a>)</pre></section>
+        </span><a id='src-36' href='../src/algorithms/up/algorithms/src/algorithms.rs.html#30-41'>[src]</a></span></h1>
+<pre class='rust fn'>pub fn insertion_sort&lt;'a, T: <a class='trait' href='http://doc.rust-lang.org/0.12.0/core/cmp/trait.Ord.html' title='core::cmp::Ord'>Ord</a> + 'a&gt;(data: &amp;'a mut <a href='http://doc.rust-lang.org/0.12.0/std/primitive.slice.html'>[T]</a>)</pre><div class='docblock'><p>Efficient sorting against small or already sorted sets.</p>
+
+<p>Insertion sort is inefficient against large sets. It requires no additional memory and is stable.</p>
+
+<p>It is efficient against already substantially sorted sets (<code>O(nk)</code> when each element is no more
+than <code>k</code> places away from its sorted position).</p>
+
+<p>Insertion sort can also sort sets as it receives them.</p>
+</div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
