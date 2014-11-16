@@ -142,6 +142,8 @@ th {
 <span id='92'>92</span>
 <span id='93'>93</span>
 <span id='94'>94</span>
+<span id='95'>95</span>
+<span id='96'>96</span>
 </pre><pre class='rust '>
 <span class='doccomment'>//! Various algorithms written in Rust.</span>
 <span class='doccomment'>//!</span>
@@ -198,7 +200,8 @@ th {
 <span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>merge_sort</span><span class='op'>&lt;</span><span class='ident'>T</span>: <span class='ident'>Ord</span> <span class='op'>+</span> <span class='ident'>Clone</span><span class='op'>&gt;</span>(<span class='ident'>data</span>: <span class='kw-2'>&amp;</span>[<span class='ident'>T</span>]) <span class='op'>-&gt;</span> <span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> {
     <span class='kw'>struct</span> <span class='ident'>Slice</span>(<span class='ident'>uint</span>, <span class='ident'>uint</span>);
 
-    <span class='kw'>fn</span> <span class='ident'>merge_sort_internal</span><span class='op'>&lt;</span><span class='ident'>T</span>: <span class='ident'>Ord</span> <span class='op'>+</span> <span class='ident'>Clone</span><span class='op'>&gt;</span>(<span class='ident'>data</span>: <span class='kw-2'>&amp;</span>[<span class='ident'>T</span>], <span class='ident'>slice</span>: <span class='ident'>Slice</span>) <span class='op'>-&gt;</span> <span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> {
+    <span class='comment'>// Divide...</span>
+    <span class='kw'>fn</span> <span class='ident'>divide</span><span class='op'>&lt;</span><span class='ident'>T</span>: <span class='ident'>Ord</span> <span class='op'>+</span> <span class='ident'>Clone</span><span class='op'>&gt;</span>(<span class='ident'>data</span>: <span class='kw-2'>&amp;</span>[<span class='ident'>T</span>], <span class='ident'>slice</span>: <span class='ident'>Slice</span>) <span class='op'>-&gt;</span> <span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> {
         <span class='kw'>let</span> <span class='ident'>Slice</span>(<span class='ident'>begin</span>, <span class='ident'>end</span>) <span class='op'>=</span> <span class='ident'>slice</span>;
         <span class='kw'>let</span> <span class='ident'>data_size</span> <span class='op'>=</span> <span class='ident'>end</span> <span class='op'>-</span> <span class='ident'>begin</span>;
 
@@ -209,10 +212,11 @@ th {
         <span class='kw'>let</span> <span class='ident'>left</span> <span class='op'>=</span> <span class='ident'>Slice</span>(<span class='ident'>begin</span>, <span class='ident'>middle</span>);
         <span class='kw'>let</span> <span class='ident'>right</span> <span class='op'>=</span> <span class='ident'>Slice</span>(<span class='ident'>middle</span>, <span class='ident'>end</span>);
 
-        <span class='ident'>merge</span>(<span class='ident'>merge_sort_internal</span>(<span class='ident'>data</span>, <span class='ident'>left</span>), <span class='ident'>merge_sort_internal</span>(<span class='ident'>data</span>, <span class='ident'>right</span>))
+        <span class='ident'>conquer</span>(<span class='ident'>divide</span>(<span class='ident'>data</span>, <span class='ident'>left</span>), <span class='ident'>divide</span>(<span class='ident'>data</span>, <span class='ident'>right</span>))
     }
 
-    <span class='kw'>fn</span> <span class='ident'>merge</span><span class='op'>&lt;</span><span class='ident'>T</span>: <span class='ident'>Ord</span> <span class='op'>+</span> <span class='ident'>Clone</span><span class='op'>&gt;</span>(<span class='ident'>left</span>: <span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span>, <span class='ident'>right</span>: <span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span>) <span class='op'>-&gt;</span> <span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> {
+    <span class='comment'>// ... and conquer.</span>
+    <span class='kw'>fn</span> <span class='ident'>conquer</span><span class='op'>&lt;</span><span class='ident'>T</span>: <span class='ident'>Ord</span> <span class='op'>+</span> <span class='ident'>Clone</span><span class='op'>&gt;</span>(<span class='ident'>left</span>: <span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span>, <span class='ident'>right</span>: <span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span>) <span class='op'>-&gt;</span> <span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>T</span><span class='op'>&gt;</span> {
         <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>left_index</span> <span class='op'>=</span> <span class='number'>0</span>;
         <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>right_index</span> <span class='op'>=</span> <span class='number'>0</span>;
         <span class='kw'>let</span> <span class='ident'>left_size</span> <span class='op'>=</span> <span class='ident'>left</span>.<span class='ident'>len</span>();
@@ -235,7 +239,7 @@ th {
         <span class='ident'>result</span>
     }
 
-    <span class='ident'>merge_sort_internal</span>(<span class='ident'>data</span>, <span class='ident'>Slice</span>(<span class='number'>0u</span>, <span class='ident'>data</span>.<span class='ident'>len</span>()))
+    <span class='ident'>divide</span>(<span class='ident'>data</span>, <span class='ident'>Slice</span>(<span class='number'>0u</span>, <span class='ident'>data</span>.<span class='ident'>len</span>()))
 }
 </pre>
 </section>
