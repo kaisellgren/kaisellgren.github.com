@@ -14,10 +14,10 @@
     
     <style>
 th {
-  padding: 0 6px;
+  padding: 0 4px;
 }
 .content td {
-  padding: 0 6px;
+  padding: 0 4px;
 }
 </style>
 
@@ -34,7 +34,7 @@ th {
 
     <section class="sidebar">
         
-        <p class='location'><a href='index.html'>algorithms</a></p><div class='block fn'><h2>Functions</h2><a class='fn current' href='fn.insertion_sort.html'>insertion_sort</a><a class='fn ' href='fn.merge_sort.html'>merge_sort</a><a class='fn ' href='fn.selection_sort.html'>selection_sort</a></div>
+        <p class='location'><a href='index.html'>algorithms</a></p><div class='block fn'><h2>Functions</h2><a class='fn current' href='fn.insertion_sort.html'>insertion_sort</a><a class='fn ' href='fn.merge_sort.html'>merge_sort</a><a class='fn ' href='fn.quick_sort.html'>quick_sort</a><a class='fn ' href='fn.selection_sort.html'>selection_sort</a></div>
     </section>
 
     <nav class="sub">
@@ -52,8 +52,8 @@ th {
 <h1 class='fqn'><span class='in-band'>Function <a href='index.html'>algorithms</a>::<wbr><a class='fn' href=''>insertion_sort</a><wbr></span><span class='out-of-band'><span id='render-detail'>
             <a id="collapse-all" href="#">[-]
             </a>&nbsp;<a id="expand-all" href="#">[+]</a>
-        </span><a id='src-36' href='../src/algorithms/up/algorithms/src/algorithms.rs.html#30-41'>[src]</a></span></h1>
-<pre class='rust fn'>pub fn insertion_sort&lt;'a, T: <a class='trait' href='http://doc.rust-lang.org/0.12.0/core/cmp/trait.Ord.html' title='core::cmp::Ord'>Ord</a> + 'a&gt;(data: &amp;'a mut <a href='http://doc.rust-lang.org/0.12.0/std/primitive.slice.html'>[T]</a>)</pre><div class='docblock'><p>Efficient sorting against small or already sorted sets.</p>
+        </span><a id='src-37' href='../src/algorithms/up/algorithms/src/algorithms.rs.html#31-44'>[src]</a></span></h1>
+<pre class='rust fn'>pub fn insertion_sort&lt;'a, A: <a class='trait' href='http://doc.rust-lang.org/0.12.0/core/cmp/trait.Ord.html' title='core::cmp::Ord'>Ord</a> + 'a&gt;(data: &amp;'a mut <a href='http://doc.rust-lang.org/0.12.0/std/primitive.slice.html'>[A]</a>)</pre><div class='docblock'><p>Efficient sorting against small or already sorted sets.</p>
 
 <p>Insertion sort is inefficient against large sets. It requires no additional memory and is stable.</p>
 

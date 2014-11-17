@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="API documentation for the Rust `selection_sort` fn in crate `algorithms`.">
-    <meta name="keywords" content="rust, rustlang, rust-lang, selection_sort">
+    <meta name="description" content="API documentation for the Rust `quick_sort` fn in crate `algorithms`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, quick_sort">
 
-    <title>algorithms::selection_sort - Rust</title>
+    <title>algorithms::quick_sort - Rust</title>
 
     <link rel="stylesheet" type="text/css" href="../main.css">
 
@@ -34,7 +34,7 @@ th {
 
     <section class="sidebar">
         
-        <p class='location'><a href='index.html'>algorithms</a></p><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.insertion_sort.html'>insertion_sort</a><a class='fn ' href='fn.merge_sort.html'>merge_sort</a><a class='fn ' href='fn.quick_sort.html'>quick_sort</a><a class='fn current' href='fn.selection_sort.html'>selection_sort</a></div>
+        <p class='location'><a href='index.html'>algorithms</a></p><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.insertion_sort.html'>insertion_sort</a><a class='fn ' href='fn.merge_sort.html'>merge_sort</a><a class='fn current' href='fn.quick_sort.html'>quick_sort</a><a class='fn ' href='fn.selection_sort.html'>selection_sort</a></div>
     </section>
 
     <nav class="sub">
@@ -49,15 +49,17 @@ th {
     </nav>
 
     <section id='main' class="content fn">
-<h1 class='fqn'><span class='in-band'>Function <a href='index.html'>algorithms</a>::<wbr><a class='fn' href=''>selection_sort</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+<h1 class='fqn'><span class='in-band'>Function <a href='index.html'>algorithms</a>::<wbr><a class='fn' href=''>quick_sort</a><wbr></span><span class='out-of-band'><span id='render-detail'>
             <a id="collapse-all" href="#">[-]
             </a>&nbsp;<a id="expand-all" href="#">[+]</a>
-        </span><a id='src-103' href='../src/algorithms/up/algorithms/src/algorithms.rs.html#51-65'>[src]</a></span></h1>
-<pre class='rust fn'>pub fn selection_sort&lt;'a, A: <a class='trait' href='http://doc.rust-lang.org/0.12.0/core/cmp/trait.Ord.html' title='core::cmp::Ord'>Ord</a> + <a class='trait' href='http://doc.rust-lang.org/0.12.0/core/num/trait.Bounded.html' title='core::num::Bounded'>Bounded</a> + 'a&gt;(data: &amp;'a mut <a href='http://doc.rust-lang.org/0.12.0/std/primitive.slice.html'>[A]</a>)</pre><div class='docblock'><p>Efficient sorting against small sets.</p>
+        </span><a id='src-378' href='../src/algorithms/up/algorithms/src/algorithms.rs.html#118-165'>[src]</a></span></h1>
+<pre class='rust fn'>pub fn quick_sort&lt;A: <a class='trait' href='http://doc.rust-lang.org/0.12.0/core/cmp/trait.Ord.html' title='core::cmp::Ord'>Ord</a>&gt;(data: &amp;mut <a href='http://doc.rust-lang.org/0.12.0/std/primitive.slice.html'>[A]</a>)</pre><div class='docblock'><p>Efficient sorting against large sets.</p>
 
-<p>Selection sort is inefficient against large sets. It requires no additional memory.</p>
+<p>This divide-and-conquer sorting algorithm performs <code>O(n log n)</code> in average and best case scenarios,
+but <code>O(n^2)</code> in the worst case.</p>
 
-<p>The write performance of <code>O(n)</code> is better than that of e.g. insertion sort&#39;s <code>O(n^2)</code>.</p>
+<p>Quicksort is often faster in practice than other <code>O(n log n)</code> algorithms due to sequential and
+localized memory references that work well with modern CPU caches.</p>
 </div></section>
     <section id='search' class="content hidden"></section>
 

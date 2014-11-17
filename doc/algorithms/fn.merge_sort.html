@@ -14,10 +14,10 @@
     
     <style>
 th {
-  padding: 0 6px;
+  padding: 0 4px;
 }
 .content td {
-  padding: 0 6px;
+  padding: 0 4px;
 }
 </style>
 
@@ -34,7 +34,7 @@ th {
 
     <section class="sidebar">
         
-        <p class='location'><a href='index.html'>algorithms</a></p><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.insertion_sort.html'>insertion_sort</a><a class='fn current' href='fn.merge_sort.html'>merge_sort</a><a class='fn ' href='fn.selection_sort.html'>selection_sort</a></div>
+        <p class='location'><a href='index.html'>algorithms</a></p><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.insertion_sort.html'>insertion_sort</a><a class='fn current' href='fn.merge_sort.html'>merge_sort</a><a class='fn ' href='fn.quick_sort.html'>quick_sort</a><a class='fn ' href='fn.selection_sort.html'>selection_sort</a></div>
     </section>
 
     <nav class="sub">
@@ -52,8 +52,8 @@ th {
 <h1 class='fqn'><span class='in-band'>Function <a href='index.html'>algorithms</a>::<wbr><a class='fn' href=''>merge_sort</a><wbr></span><span class='out-of-band'><span id='render-detail'>
             <a id="collapse-all" href="#">[-]
             </a>&nbsp;<a id="expand-all" href="#">[+]</a>
-        </span><a id='src-200' href='../src/algorithms/up/algorithms/src/algorithms.rs.html#70-113'>[src]</a></span></h1>
-<pre class='rust fn'>pub fn merge_sort&lt;T: <a class='trait' href='http://doc.rust-lang.org/0.12.0/core/cmp/trait.Ord.html' title='core::cmp::Ord'>Ord</a> + <a class='trait' href='http://doc.rust-lang.org/0.12.0/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a>&gt;(data: &amp;<a href='http://doc.rust-lang.org/0.12.0/std/primitive.slice.html'>[T]</a>) -&gt; <a class='struct' href='http://doc.rust-lang.org/0.12.0/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;T&gt;</pre><div class='docblock'><p>Efficient sorting against large sets. Requires <code>O(n)</code> aux. space.</p>
+        </span><a id='src-178' href='../src/algorithms/up/algorithms/src/algorithms.rs.html#71-109'>[src]</a></span></h1>
+<pre class='rust fn'>pub fn merge_sort&lt;A: <a class='trait' href='http://doc.rust-lang.org/0.12.0/core/cmp/trait.Ord.html' title='core::cmp::Ord'>Ord</a> + <a class='trait' href='http://doc.rust-lang.org/0.12.0/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a>&gt;(data: &amp;<a href='http://doc.rust-lang.org/0.12.0/std/primitive.slice.html'>[A]</a>) -&gt; <a class='struct' href='http://doc.rust-lang.org/0.12.0/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;A&gt;</pre><div class='docblock'><p>Efficient sorting against large sets. Requires <code>O(n)</code> aux. space.</p>
 
 <p>This divide-and-conquer sorting algorithm, while inefficient with memory use, performs
 <code>O(n log n)</code> in average, worst and best case scenarios even against large sets of data.</p>
