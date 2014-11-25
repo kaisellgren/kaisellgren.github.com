@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="API documentation for the Rust `meta` mod in crate `rust_git`.">
-    <meta name="keywords" content="rust, rustlang, rust-lang, meta">
+    <meta name="description" content="API documentation for the Rust `CommitSortStrategy` enum in crate `rust_git`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, CommitSortStrategy">
 
-    <title>rust_git::meta - Rust</title>
+    <title>rust_git::commit_sort_strategy::CommitSortStrategy - Rust</title>
 
     <link rel="stylesheet" type="text/css" href="../../main.css">
 
@@ -26,7 +26,7 @@
 
     <section class="sidebar">
         
-        <p class='location'><a href='../index.html'>rust_git</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='../blob/index.html'>blob</a><a class='mod ' href='../branch/index.html'>branch</a><a class='mod ' href='../commit/index.html'>commit</a><a class='mod ' href='../commit_filter/index.html'>commit_filter</a><a class='mod ' href='../commit_sort_strategy/index.html'>commit_sort_strategy</a><a class='mod ' href='../error/index.html'>error</a><a class='mod ' href='../file_status/index.html'>file_status</a><a class='mod current' href='../meta/index.html'>meta</a><a class='mod ' href='../object_database/index.html'>object_database</a><a class='mod ' href='../object_header/index.html'>object_header</a><a class='mod ' href='../object_id/index.html'>object_id</a><a class='mod ' href='../object_type/index.html'>object_type</a><a class='mod ' href='../reference/index.html'>reference</a><a class='mod ' href='../repository/index.html'>repository</a><a class='mod ' href='../result/index.html'>result</a><a class='mod ' href='../tag/index.html'>tag</a><a class='mod ' href='../tag_type/index.html'>tag_type</a></div>
+        <p class='location'><a href='../index.html'>rust_git</a>::<wbr><a href='index.html'>commit_sort_strategy</a></p><div class='block enum'><h2>Enums</h2><a class='enum current' href='enum.CommitSortStrategy.html'>CommitSortStrategy</a></div>
     </section>
 
     <nav class="sub">
@@ -40,20 +40,18 @@
         </form>
     </nav>
 
-    <section id='main' class="content mod">
-<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>rust_git</a>::<wbr><a class='mod' href=''>meta</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>rust_git</a>::<wbr><a href='index.html'>commit_sort_strategy</a>::<wbr><a class='enum' href=''>CommitSortStrategy</a><wbr></span><span class='out-of-band'><span id='render-detail'>
             <a id="collapse-all" href="#">[-]
             </a>&nbsp;<a id="expand-all" href="#">[+]</a>
-        </span><a id='src-1283' href='../../src/rust_git/up/RustGit/src/meta.rs.html#1-10'>[src]</a></span></h1>
-<div class='docblock'><p>Meta information about Git objects.</p>
-</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
-<table>
-                    <tr>
-                        <td><a class='stability Unmarked' title='No stability level'></a><a class='struct' href='struct.Meta.html'
-                               title='rust_git::meta::Meta'>Meta</a></td>
-                        <td class='docblock short'></td>
-                    </tr>
-                </table></section>
+        </span><a id='src-6343' href='../../src/rust_git/up/RustGit/src/commit_sort_strategy.rs.html#3-8'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum CommitSortStrategy {
+    TopoLogical,
+    MostRecent,
+    TopologicalTime,
+    Reverse,
+}</pre><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.TopoLogical'><a class='stability Unmarked' title='No stability level'></a><code>TopoLogical</code></td><td></td></tr><tr><td id='variant.MostRecent'><a class='stability Unmarked' title='No stability level'></a><code>MostRecent</code></td><td></td></tr><tr><td id='variant.TopologicalTime'><a class='stability Unmarked' title='No stability level'></a><code>TopologicalTime</code></td><td></td></tr><tr><td id='variant.Reverse'><a class='stability Unmarked' title='No stability level'></a><code>Reverse</code></td><td></td></tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>

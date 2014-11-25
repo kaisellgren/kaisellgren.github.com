@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="API documentation for the Rust `find` fn in crate `rust_git`.">
-    <meta name="keywords" content="rust, rustlang, rust-lang, find">
+    <meta name="description" content="Source to the Rust file `..\RustGit\src\result.rs`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang">
 
-    <title>rust_git::blob::find - Rust</title>
+    <title>result.rs.html -- source</title>
 
-    <link rel="stylesheet" type="text/css" href="../../main.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../main.css">
 
     
     
@@ -26,7 +26,7 @@
 
     <section class="sidebar">
         
-        <p class='location'><a href='../index.html'>rust_git</a>::<wbr><a href='index.html'>blob</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Blob.html'>Blob</a></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.decode.html'>decode</a><a class='fn ' href='fn.decode_body.html'>decode_body</a><a class='fn ' href='fn.encode.html'>encode</a><a class='fn current' href='fn.find.html'>find</a></div>
+        
     </section>
 
     <nav class="sub">
@@ -40,12 +40,15 @@
         </form>
     </nav>
 
-    <section id='main' class="content fn">
-<h1 class='fqn'><span class='in-band'>Function <a href='../index.html'>rust_git</a>::<wbr><a href='index.html'>blob</a>::<wbr><a class='fn' href=''>find</a><wbr></span><span class='out-of-band'><span id='render-detail'>
-            <a id="collapse-all" href="#">[-]
-            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
-        </span><a id='src-6083' href='../../src/rust_git/up/RustGit/src/blob.rs.html#48-53'>[src]</a></span></h1>
-<pre class='rust fn'>pub fn find(id: &amp;<a class='struct' href='../../rust_git/object_id/struct.ObjectId.html' title='rust_git::object_id::ObjectId'>ObjectId</a>, repository: &amp;<a class='struct' href='../../rust_git/repository/struct.Repository.html' title='rust_git::repository::Repository'>Repository</a>) -&gt; <a class='enum' href='http://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../rust_git/blob/struct.Blob.html' title='rust_git::blob::Blob'>Blob</a>, <a class='enum' href='../../rust_git/error/enum.GitError.html' title='rust_git::error::GitError'>GitError</a>&gt;</pre></section>
+    <section id='main' class="content source"><pre class='line-numbers'><span id='1'>1</span>
+<span id='2'>2</span>
+<span id='3'>3</span>
+</pre><pre class='rust '>
+<span class='kw'>use</span> <span class='ident'>error</span>::<span class='ident'>GitError</span>;
+
+<span class='kw'>pub</span> <span class='kw'>type</span> <span class='ident'>EmptyResult</span> <span class='op'>=</span> <span class='prelude-ty'>Result</span><span class='op'>&lt;</span>(), <span class='ident'>GitError</span><span class='op'>&gt;</span>;
+</pre>
+</section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -84,13 +87,13 @@
     
 
     <script>
-        window.rootPath = "../../";
+        window.rootPath = "../../../../../";
         window.currentCrate = "rust_git";
         window.playgroundUrl = "";
     </script>
-    <script src="../../jquery.js"></script>
-    <script src="../../main.js"></script>
+    <script src="../../../../../jquery.js"></script>
+    <script src="../../../../../main.js"></script>
     
-    <script async src="../../search-index.js"></script>
+    <script async src="../../../../../search-index.js"></script>
 </body>
 </html>

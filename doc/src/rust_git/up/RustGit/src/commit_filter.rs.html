@@ -67,13 +67,13 @@
 </pre><pre class='rust '>
 <span class='doccomment'>//! A filter that specifies which changesets are queried.</span>
 
-<span class='kw'>use</span> <span class='ident'>commit_sort_strategy</span>;
+<span class='kw'>use</span> <span class='ident'>commit_sort_strategy</span>::<span class='ident'>CommitSortStrategy</span>;
 <span class='kw'>use</span> <span class='ident'>object_id</span>::<span class='ident'>ObjectId</span>;
 
 <span class='kw'>pub</span> <span class='kw'>struct</span> <span class='ident'>CommitFilter</span> {
     <span class='kw'>pub</span> <span class='ident'>limit</span>: <span class='ident'>uint</span>,
     <span class='kw'>pub</span> <span class='ident'>offset</span>: <span class='ident'>uint</span>,
-    <span class='kw'>pub</span> <span class='ident'>sort</span>: <span class='ident'>commit_sort_strategy</span>::<span class='ident'>CommitSortStrategy</span>,
+    <span class='kw'>pub</span> <span class='ident'>sort</span>: <span class='ident'>CommitSortStrategy</span>,
     <span class='kw'>pub</span> <span class='ident'>since</span>: <span class='prelude-ty'>Option</span><span class='op'>&lt;</span><span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>ObjectId</span><span class='op'>&gt;&gt;</span>,
     <span class='kw'>pub</span> <span class='ident'>until</span>: <span class='prelude-ty'>Option</span><span class='op'>&lt;</span><span class='ident'>Vec</span><span class='op'>&lt;</span><span class='ident'>ObjectId</span><span class='op'>&gt;&gt;</span>,
 }
@@ -83,7 +83,7 @@
         <span class='ident'>CommitFilter</span> {
             <span class='ident'>limit</span>: <span class='number'>10</span>,
             <span class='ident'>offset</span>: <span class='number'>0</span>,
-            <span class='ident'>sort</span>: <span class='ident'>commit_sort_strategy</span>::<span class='ident'>MostRecent</span>,
+            <span class='ident'>sort</span>: <span class='ident'>CommitSortStrategy</span>::<span class='ident'>MostRecent</span>,
             <span class='ident'>since</span>: <span class='prelude-val'>None</span>,
             <span class='ident'>until</span>: <span class='prelude-val'>None</span>,
         }
