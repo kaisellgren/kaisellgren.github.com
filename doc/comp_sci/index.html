@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `comp_sci` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, comp_sci">
+
+    <title>comp_sci - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    
+    <style>
+th {
+  padding: 0 4px;
+}
+.content td {
+  padding: 0 4px;
+}
+</style>
+
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'></p>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>comp_sci</a><wbr></span><span class='out-of-band'><a href='stability.html'>[stability]</a> <span id='render-detail'>
+            <a id="collapse-all" href="#">[-]
+            </a>&nbsp;<a id="expand-all" href="#">[+]</a>
+        </span><a id='src-0' href='../src/comp_sci/lib.rs.html#1-152'>[src]</a></span></h1>
+<div class='docblock'><p>This project consists of articles, data structures, algorithms and solutions to common problems.</p>
+
+<h1 id="sorting-algorithms" class='section-header'><a
+                           href="#sorting-algorithms">Sorting algorithms</a></h1>
+<table><thead>
+<tr>
+<th style="text-align: left">Algorithm</th>
+<th style="text-align: center">Best case</th>
+<th style="text-align: center">Average case</th>
+<th style="text-align: center">Worst case</th>
+<th style="text-align: center">Auxiliary space</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">Selection sort</td>
+<td style="text-align: center">O(n<sup>2)</sup></td>
+<td style="text-align: center">O(n<sup>2)</sup></td>
+<td style="text-align: center">O(n<sup>2)</sup></td>
+<td style="text-align: center">O(1)</td>
+</tr>
+<tr>
+<td style="text-align: left">Insertion sort</td>
+<td style="text-align: center">O(n)</td>
+<td style="text-align: center">O(n<sup>2)</sup></td>
+<td style="text-align: center">O(n<sup>2)</sup></td>
+<td style="text-align: center">O(1)</td>
+</tr>
+<tr>
+<td style="text-align: left">Merge sort</td>
+<td style="text-align: center">O(n log n)</td>
+<td style="text-align: center">O(n log n)</td>
+<td style="text-align: center">O(n log n)</td>
+<td style="text-align: center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align: left">Quick sort</td>
+<td style="text-align: center">O(n log n)</td>
+<td style="text-align: center">O(n log n)</td>
+<td style="text-align: center">O(n<sup>2)</sup></td>
+<td style="text-align: center">O(log n)</td>
+</tr>
+</tbody></table>
+
+<h1 id="data-structures" class='section-header'><a
+                           href="#data-structures">Data structures</a></h1>
+<p>Always choose your data structures carefully. Look below for guidance.</p>
+
+<h3 id="indexing-performance" class='section-header'><a
+                           href="#indexing-performance">Indexing performance</a></h3>
+<p>Indexing is the act of accessing an arbitrary element in the data structure.
+This is usually achieved with <code>[]</code> in Rust.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Data structure</th>
+<th style="text-align: center">Average case</th>
+<th style="text-align: center">Worst case</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">HeapArray</td>
+<td style="text-align: center">O(1)</td>
+<td style="text-align: center">O(1)</td>
+</tr>
+<tr>
+<td style="text-align: center">ArrayList</td>
+<td style="text-align: center">O(1)</td>
+<td style="text-align: center">O(1)</td>
+</tr>
+</tbody></table>
+
+<h3 id="search-performance" class='section-header'><a
+                           href="#search-performance">Search performance</a></h3>
+<p>Searching is the act of finding an arbitrary element within the data structure.
+This is usually achieved with a method such as <code>contains()</code>, <code>get()</code> or similar.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Data structure</th>
+<th style="text-align: center">Average case</th>
+<th style="text-align: center">Worst case</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">HeapArray</td>
+<td style="text-align: center">O(n)</td>
+<td style="text-align: center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align: center">ArrayList</td>
+<td style="text-align: center">O(n)</td>
+<td style="text-align: center">O(n)</td>
+</tr>
+</tbody></table>
+
+<h3 id="insertion-performance" class='section-header'><a
+                           href="#insertion-performance">Insertion performance</a></h3>
+<p>Insertion is the act of inserting an element at an arbitrary position within the data structure.
+This is usually achieved with a method such as <code>insert()</code>, and there is sometimes a <code>push()</code>
+for inserting at the end of the data structure given it makes sense.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Data structure</th>
+<th style="text-align: center">Best case</th>
+<th style="text-align: center">Average case</th>
+<th style="text-align: center">Worst case</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">HeapArray[1]</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+</tr>
+<tr>
+<td style="text-align: center">ArrayList[2]</td>
+<td style="text-align: center">O(1)</td>
+<td style="text-align: center">O(n - index)</td>
+<td style="text-align: center">O(n)</td>
+</tr>
+</tbody></table>
+
+<p>[1]: HeapArray is immutable thus this function is not available.</p>
+
+<p>[2]: ArrayList&#39;s insertion performance depends on the index you add an element to.
+Adding to the end of the list is <code>O(1)</code> while adding to the front is <code>O(n)</code>, because all the prior elements would have to be moved forward.</p>
+
+<p>Further more, if the capacity of the list is exceeded, it will be <code>O(n)</code> as the entire list has to be reallocated.</p>
+
+<h3 id="deletion-performance" class='section-header'><a
+                           href="#deletion-performance">Deletion performance</a></h3>
+<p>Deletion is the act of removing an element from the data structure. This is usually achieved with
+a method such as <code>remove()</code>.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Data structure</th>
+<th style="text-align: center">Best case</th>
+<th style="text-align: center">Average case</th>
+<th style="text-align: center">Worst case</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">HeapArray[1]</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
+</tr>
+<tr>
+<td style="text-align: center">ArrayList[2]</td>
+<td style="text-align: center">O(1)</td>
+<td style="text-align: center">O(n - index)</td>
+<td style="text-align: center">O(n)</td>
+</tr>
+</tbody></table>
+
+<p>[1]: HeapArray is immutable thus this function is not available.</p>
+
+<p>[2]: ArrayList&#39;s deletion performance depends on the index you delete an element from. Deleting from the end of the list is <code>O(1)</code> while deleting from the front is <code>O(n)</code>, because all the prior elements would have to be moved backward.</p>
+
+<h3 id="space-complexity" class='section-header'><a
+                           href="#space-complexity">Space complexity</a></h3>
+<p>Space complexity defines how much memory is necessary to represent the data structure.</p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Data structure</th>
+<th style="text-align: center">Space complexity</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">HeapArray</td>
+<td style="text-align: center">O(n)</td>
+</tr>
+<tr>
+<td style="text-align: center">ArrayList</td>
+<td style="text-align: center">O(n)</td>
+</tr>
+</tbody></table>
+</div><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='mod' href='algorithms/index.html'
+                               title='comp_sci::algorithms'>algorithms</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='mod' href='data_structures/index.html'
+                               title='comp_sci::data_structures'>data_structures</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
+                </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.remove_duplicates_by_sorting.html'
+                               title='comp_sci::remove_duplicates_by_sorting'>remove_duplicates_by_sorting</a></td>
+                        <td class='docblock short'><p>Removes duplicate entries from Vec with a complexity of O(n log n + n) I believe (TODO).</p>
+</td>
+                    </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.remove_duplicates_with_dual_pointers.html'
+                               title='comp_sci::remove_duplicates_with_dual_pointers'>remove_duplicates_with_dual_pointers</a></td>
+                        <td class='docblock short'><p>Removes duplicate entries from Vec with a complexity of O(n(n+1)/2).</p>
+</td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "comp_sci";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    
+    <script async src="../search-index.js"></script>
+</body>
+</html>
