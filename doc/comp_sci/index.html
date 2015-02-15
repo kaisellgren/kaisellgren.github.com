@@ -52,7 +52,7 @@ th {
 <h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>comp_sci</a><wbr></span><span class='out-of-band'><a href='stability.html'>[stability]</a> <span id='render-detail'>
             <a id="collapse-all" href="#">[-]
             </a>&nbsp;<a id="expand-all" href="#">[+]</a>
-        </span><a id='src-0' href='../src/comp_sci/lib.rs.html#1-152'>[src]</a></span></h1>
+        </span><a id='src-0' href='../src/comp_sci/lib.rs.html#1-180'>[src]</a></span></h1>
 <div class='docblock'><p>This project consists of articles, data structures, algorithms and solutions to common problems.</p>
 
 <h1 id="sorting-algorithms" class='section-header'><a
@@ -159,6 +159,7 @@ for inserting at the end of the data structure given it makes sense.</p>
 <th style="text-align: center">Data structure</th>
 <th style="text-align: center">Best case</th>
 <th style="text-align: center">Average case</th>
+<th style="text-align: center">Amortized</th>
 <th style="text-align: center">Worst case</th>
 </tr>
 </thead><tbody>
@@ -167,16 +168,18 @@ for inserting at the end of the data structure given it makes sense.</p>
 <td style="text-align: center">N/A</td>
 <td style="text-align: center">N/A</td>
 <td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
 </tr>
 <tr>
 <td style="text-align: center">ArrayList[2]</td>
 <td style="text-align: center">O(1)</td>
+<td style="text-align: center">O(n)</td>
 <td style="text-align: center">O(n - index)</td>
 <td style="text-align: center">O(n)</td>
 </tr>
 </tbody></table>
 
-<p>[1]: HeapArray is immutable thus this function is not available.</p>
+<p>[1]: HeapArray is fixed-size thus this function is not available.</p>
 
 <p>[2]: ArrayList&#39;s insertion performance depends on the index you add an element to.
 Adding to the end of the list is <code>O(1)</code> while adding to the front is <code>O(n)</code>, because all the prior elements would have to be moved forward.</p>
@@ -193,6 +196,7 @@ a method such as <code>remove()</code>.</p>
 <th style="text-align: center">Data structure</th>
 <th style="text-align: center">Best case</th>
 <th style="text-align: center">Average case</th>
+<th style="text-align: center">Amortized</th>
 <th style="text-align: center">Worst case</th>
 </tr>
 </thead><tbody>
@@ -201,16 +205,18 @@ a method such as <code>remove()</code>.</p>
 <td style="text-align: center">N/A</td>
 <td style="text-align: center">N/A</td>
 <td style="text-align: center">N/A</td>
+<td style="text-align: center">N/A</td>
 </tr>
 <tr>
 <td style="text-align: center">ArrayList[2]</td>
 <td style="text-align: center">O(1)</td>
+<td style="text-align: center">O(n)</td>
 <td style="text-align: center">O(n - index)</td>
 <td style="text-align: center">O(n)</td>
 </tr>
 </tbody></table>
 
-<p>[1]: HeapArray is immutable thus this function is not available.</p>
+<p>[1]: HeapArray is fixed-size thus this function is not available.</p>
 
 <p>[2]: ArrayList&#39;s deletion performance depends on the index you delete an element from. Deleting from the end of the list is <code>O(1)</code> while deleting from the front is <code>O(n)</code>, because all the prior elements would have to be moved backward.</p>
 
@@ -246,8 +252,21 @@ a method such as <code>remove()</code>.</p>
                                title='comp_sci::data_structures'>data_structures</a></td>
                         <td class='docblock short'></td>
                     </tr>
+                
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='mod' href='programs/index.html'
+                               title='comp_sci::programs'>programs</a></td>
+                        <td class='docblock short'></td>
+                    </tr>
                 </table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
 <table>
+                    <tr>
+                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.binary_search.html'
+                               title='comp_sci::binary_search'>binary_search</a></td>
+                        <td class='docblock short'><p>Finds the position of the key within the given slice.</p>
+</td>
+                    </tr>
+                
                     <tr>
                         <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.remove_duplicates_by_sorting.html'
                                title='comp_sci::remove_duplicates_by_sorting'>remove_duplicates_by_sorting</a></td>

@@ -200,6 +200,34 @@ th {
 <span id="150">150</span>
 <span id="151">151</span>
 <span id="152">152</span>
+<span id="153">153</span>
+<span id="154">154</span>
+<span id="155">155</span>
+<span id="156">156</span>
+<span id="157">157</span>
+<span id="158">158</span>
+<span id="159">159</span>
+<span id="160">160</span>
+<span id="161">161</span>
+<span id="162">162</span>
+<span id="163">163</span>
+<span id="164">164</span>
+<span id="165">165</span>
+<span id="166">166</span>
+<span id="167">167</span>
+<span id="168">168</span>
+<span id="169">169</span>
+<span id="170">170</span>
+<span id="171">171</span>
+<span id="172">172</span>
+<span id="173">173</span>
+<span id="174">174</span>
+<span id="175">175</span>
+<span id="176">176</span>
+<span id="177">177</span>
+<span id="178">178</span>
+<span id="179">179</span>
+<span id="180">180</span>
 </pre><pre class='rust '>
 <span class='doccomment'>//! This project consists of articles, data structures, algorithms and solutions to common problems.</span>
 <span class='doccomment'>//!</span>
@@ -242,12 +270,12 @@ th {
 <span class='doccomment'>//! This is usually achieved with a method such as `insert()`, and there is sometimes a `push()`</span>
 <span class='doccomment'>//! for inserting at the end of the data structure given it makes sense.</span>
 <span class='doccomment'>//!</span>
-<span class='doccomment'>//! Data structure | Best case | Average case | Worst case</span>
-<span class='doccomment'>//! :------------: | :-------: | :----------: | :--------:</span>
-<span class='doccomment'>//! HeapArray[1] | N/A | N/A | N/A</span>
-<span class='doccomment'>//! ArrayList[2] | O(1) | O(n - index) | O(n)</span>
+<span class='doccomment'>//! Data structure | Best case | Average case | Amortized | Worst case</span>
+<span class='doccomment'>//! :------------: | :-------: | :----------: | :-------: | :--------:</span>
+<span class='doccomment'>//! HeapArray[1] | N/A | N/A | N/A | N/A</span>
+<span class='doccomment'>//! ArrayList[2] | O(1) | O(n) | O(n - index) | O(n)</span>
 <span class='doccomment'>//!</span>
-<span class='doccomment'>//! [1]: HeapArray is immutable thus this function is not available.</span>
+<span class='doccomment'>//! [1]: HeapArray is fixed-size thus this function is not available.</span>
 <span class='doccomment'>//!</span>
 <span class='doccomment'>//! [2]: ArrayList&#39;s insertion performance depends on the index you add an element to.</span>
 <span class='doccomment'>//! Adding to the end of the list is `O(1)` while adding to the front is `O(n)`, because all the prior elements would have to be moved forward.</span>
@@ -259,12 +287,12 @@ th {
 <span class='doccomment'>//! Deletion is the act of removing an element from the data structure. This is usually achieved with</span>
 <span class='doccomment'>//! a method such as `remove()`.</span>
 <span class='doccomment'>//!</span>
-<span class='doccomment'>//! Data structure | Best case | Average case | Worst case</span>
-<span class='doccomment'>//! :------------: | :-------: | :----------: | :--------:</span>
-<span class='doccomment'>//! HeapArray[1] | N/A | N/A | N/A</span>
-<span class='doccomment'>//! ArrayList[2] | O(1) | O(n - index) | O(n)</span>
+<span class='doccomment'>//! Data structure | Best case | Average case | Amortized | Worst case</span>
+<span class='doccomment'>//! :------------: | :-------: | :----------: | :-------: | :--------:</span>
+<span class='doccomment'>//! HeapArray[1] | N/A | N/A | N/A | N/A</span>
+<span class='doccomment'>//! ArrayList[2] | O(1) | O(n) | O(n - index) | O(n)</span>
 <span class='doccomment'>//!</span>
-<span class='doccomment'>//! [1]: HeapArray is immutable thus this function is not available.</span>
+<span class='doccomment'>//! [1]: HeapArray is fixed-size thus this function is not available.</span>
 <span class='doccomment'>//!</span>
 <span class='doccomment'>//! [2]: ArrayList&#39;s deletion performance depends on the index you delete an element from. Deleting from the end of the list is `O(1)` while deleting from the front is `O(n)`, because all the prior elements would have to be moved backward.</span>
 <span class='doccomment'>//!</span>
@@ -281,6 +309,7 @@ th {
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>allow</span>(<span class='ident'>unstable</span>)]</span>
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>allow</span>(<span class='ident'>unused_imports</span>)]</span>
 <span class='attribute'>#<span class='op'>!</span>[<span class='ident'>allow</span>(<span class='ident'>dead_code</span>)]</span>
+<span class='attribute'>#<span class='op'>!</span>[<span class='ident'>feature</span>(<span class='ident'>unsafe_destructor</span>)]</span>
 
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>rand</span>;
 <span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>test</span>;
@@ -290,6 +319,7 @@ th {
 
 <span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>algorithms</span>;
 <span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>data_structures</span>;
+<span class='kw'>pub</span> <span class='kw'>mod</span> <span class='ident'>programs</span>;
 
 <span class='kw'>fn</span> <span class='ident'>assert_sorted</span><span class='op'>&lt;</span><span class='ident'>T</span>: <span class='ident'>Ord</span><span class='op'>&gt;</span>(<span class='ident'>data</span>: <span class='kw-2'>&amp;</span>[<span class='ident'>T</span>]) {
     <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>index</span> <span class='op'>=</span> <span class='number'>1</span>;
@@ -338,6 +368,32 @@ th {
 
         <span class='ident'>current_index</span> <span class='op'>+=</span> <span class='number'>1</span>;
     }
+}
+
+<span class='doccomment'>/// Finds the position of the key within the given slice.</span>
+<span class='doccomment'>///</span>
+<span class='doccomment'>/// This is a O(log n) on average and at worst, O(1) at best.</span>
+<span class='doccomment'>/// Note: the given slice must be ordered.</span>
+<span class='kw'>pub</span> <span class='kw'>fn</span> <span class='ident'>binary_search</span><span class='op'>&lt;</span><span class='ident'>A</span>: <span class='ident'>Ord</span><span class='op'>&gt;</span>(<span class='ident'>data</span>: <span class='kw-2'>&amp;</span>[<span class='ident'>A</span>], <span class='ident'>key</span>: <span class='ident'>A</span>) <span class='op'>-&gt;</span> <span class='ident'>usize</span> {
+    <span class='kw'>fn</span> <span class='ident'>accumulator</span><span class='op'>&lt;</span><span class='ident'>A</span>: <span class='ident'>Ord</span><span class='op'>&gt;</span>(<span class='ident'>data</span>: <span class='kw-2'>&amp;</span>[<span class='ident'>A</span>], <span class='ident'>key</span>: <span class='ident'>A</span>, <span class='ident'>offset</span>: <span class='ident'>usize</span>) <span class='op'>-&gt;</span> <span class='ident'>usize</span> {
+        <span class='kw'>let</span> <span class='ident'>middle</span> <span class='op'>=</span> <span class='ident'>data</span>.<span class='ident'>len</span>() <span class='op'>/</span> <span class='number'>2</span>;
+
+        <span class='kw'>if</span> <span class='ident'>data</span>[<span class='ident'>middle</span>] <span class='op'>&gt;</span> <span class='ident'>key</span> {
+            <span class='ident'>accumulator</span>(<span class='ident'>data</span>.<span class='ident'>slice_to</span>(<span class='ident'>middle</span>), <span class='ident'>key</span>, <span class='ident'>offset</span>)
+        } <span class='kw'>else</span> <span class='kw'>if</span> <span class='ident'>data</span>[<span class='ident'>middle</span>] <span class='op'>&lt;</span> <span class='ident'>key</span> {
+            <span class='ident'>accumulator</span>(<span class='ident'>data</span>.<span class='ident'>slice_from</span>(<span class='ident'>middle</span>), <span class='ident'>key</span>, <span class='ident'>offset</span> <span class='op'>+</span> <span class='ident'>middle</span>)
+        } <span class='kw'>else</span> {
+            <span class='ident'>middle</span> <span class='op'>+</span> <span class='ident'>offset</span>
+        }
+    };
+
+    <span class='ident'>accumulator</span>(<span class='ident'>data</span>, <span class='ident'>key</span>, <span class='number'>0</span>)
+}
+
+<span class='attribute'>#[<span class='ident'>test</span>]</span>
+<span class='kw'>fn</span> <span class='ident'>test_binary_search</span>() {
+    <span class='kw'>let</span> <span class='ident'>stuff</span> <span class='op'>=</span> <span class='macro'>vec</span><span class='macro'>!</span>[<span class='number'>0u8</span>, <span class='number'>2</span>, <span class='number'>4</span>, <span class='number'>6</span>, <span class='number'>8</span>, <span class='number'>9</span>, <span class='number'>10</span>];
+    <span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='number'>1</span>, <span class='ident'>binary_search</span>(<span class='ident'>stuff</span>.<span class='ident'>as_slice</span>(), <span class='number'>2u8</span>));
 }
 
 <span class='attribute'>#[<span class='ident'>test</span>]</span>

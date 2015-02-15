@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="API documentation for the Rust `insertion_sort` mod in crate `comp_sci`.">
-    <meta name="keywords" content="rust, rustlang, rust-lang, insertion_sort">
+    <meta name="description" content="API documentation for the Rust `binary_search` fn in crate `comp_sci`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, binary_search">
 
-    <title>comp_sci::algorithms::insertion_sort - Rust</title>
+    <title>comp_sci::binary_search - Rust</title>
 
-    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
 
     
     <style>
@@ -34,7 +34,7 @@ th {
 
     <section class="sidebar">
         
-        <p class='location'><a href='../../index.html'>comp_sci</a>::<wbr><a href='../index.html'>algorithms</a></p><div class='block mod'><h2>Modules</h2><a class='mod current' href='../insertion_sort/index.html'>insertion_sort</a><a class='mod ' href='../merge_sort/index.html'>merge_sort</a><a class='mod ' href='../murmur/index.html'>murmur</a><a class='mod ' href='../quick_sort/index.html'>quick_sort</a><a class='mod ' href='../selection_sort/index.html'>selection_sort</a></div>
+        <p class='location'><a href='index.html'>comp_sci</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='algorithms/index.html'>algorithms</a><a class='mod ' href='data_structures/index.html'>data_structures</a><a class='mod ' href='programs/index.html'>programs</a></div><div class='block fn'><h2>Functions</h2><a class='fn current' href='fn.binary_search.html'>binary_search</a><a class='fn ' href='fn.remove_duplicates_by_sorting.html'>remove_duplicates_by_sorting</a><a class='fn ' href='fn.remove_duplicates_with_dual_pointers.html'>remove_duplicates_with_dual_pointers</a></div>
     </section>
 
     <nav class="sub">
@@ -48,20 +48,16 @@ th {
         </form>
     </nav>
 
-    <section id='main' class="content mod">
-<h1 class='fqn'><span class='in-band'>Module <a href='../../index.html'>comp_sci</a>::<wbr><a href='../index.html'>algorithms</a>::<wbr><a class='mod' href=''>insertion_sort</a><wbr></span><span class='out-of-band'><span id='render-detail'>
+    <section id='main' class="content fn">
+<h1 class='fqn'><span class='in-band'>Function <a href='index.html'>comp_sci</a>::<wbr><a class='fn' href=''>binary_search</a><wbr></span><span class='out-of-band'><span id='render-detail'>
             <a id="collapse-all" href="#">[-]
             </a>&nbsp;<a id="expand-all" href="#">[+]</a>
-        </span><a id='src-11' href='../../../src/comp_sci/algorithms/insertion_sort.rs.html#1-34'>[src]</a></span></h1>
-<h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
-<table>
-                    <tr>
-                        <td><a class='stability Unmarked' title='No stability level'></a><a class='fn' href='fn.insertion_sort.html'
-                               title='comp_sci::algorithms::insertion_sort::insertion_sort'>insertion_sort</a></td>
-                        <td class='docblock short'><p>Efficient sorting against small or already sorted sets.</p>
-</td>
-                    </tr>
-                </table></section>
+        </span><a id='src-2813' href='../src/comp_sci/lib.rs.html#146-160'>[src]</a></span></h1>
+<pre class='rust fn'>pub fn binary_search&lt;A: <a class='trait' href='http://doc.rust-lang.org/nightly/core/cmp/trait.Ord.html' title='core::cmp::Ord'>Ord</a>&gt;(data: <a href='http://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[A]</a>, key: A) -&gt; <a href='http://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></pre><div class='docblock'><p>Finds the position of the key within the given slice.</p>
+
+<p>This is a O(log n) on average and at worst, O(1) at best.
+Note: the given slice must be ordered.</p>
+</div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -100,13 +96,13 @@ th {
     
 
     <script>
-        window.rootPath = "../../../";
+        window.rootPath = "../";
         window.currentCrate = "comp_sci";
         window.playgroundUrl = "";
     </script>
-    <script src="../../../jquery.js"></script>
-    <script src="../../../main.js"></script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
     
-    <script async src="../../../search-index.js"></script>
+    <script async src="../search-index.js"></script>
 </body>
 </html>

@@ -268,6 +268,8 @@ th {
 <span id="218">218</span>
 <span id="219">219</span>
 <span id="220">220</span>
+<span id="221">221</span>
+<span id="222">222</span>
 </pre><pre class='rust '>
 <span class='kw'>use</span> <span class='ident'>data_structures</span>::<span class='ident'>heap_array</span>::<span class='ident'>HeapArray</span>;
 <span class='kw'>use</span> <span class='ident'>core</span>::<span class='ident'>raw</span>::<span class='ident'>Slice</span> <span class='kw'>as</span> <span class='ident'>RawSlice</span>;
@@ -332,6 +334,8 @@ th {
         }
 
         <span class='self'>self</span>.<span class='ident'>ensure_enough_capacity</span>();
+
+<span class='comment'>// TODO: JUST USE MEM CPY!</span>
 
         <span class='kw'>for</span> <span class='ident'>i</span> <span class='kw'>in</span> <span class='ident'>range</span>(<span class='ident'>index</span>, <span class='self'>self</span>.<span class='ident'>length</span>) {
             <span class='self'>self</span>.<span class='ident'>elements</span>.<span class='ident'>swap</span>(<span class='self'>self</span>.<span class='ident'>length</span> <span class='op'>-</span> <span class='ident'>i</span>, <span class='self'>self</span>.<span class='ident'>length</span> <span class='op'>-</span> <span class='ident'>i</span> <span class='op'>-</span> <span class='number'>1</span>);
